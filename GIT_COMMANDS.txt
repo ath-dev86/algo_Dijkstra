@@ -1,0 +1,26 @@
+# Commandes Git pour le projet
+
+# 1. Initialiser le dépôt (si pas déjà fait)
+git init
+
+# 2. Ajouter tous les fichiers
+git add .
+
+# 3. Vérifier ce qui sera commité
+git status
+
+# 4. Faire le premier commit
+git commit -m "Initial commit: Projet Algorithme de Dijkstra"
+
+# 5. Ajouter le remote (remplacer par votre URL)
+git remote add origin <URL_DU_DEPOT>
+
+# 6. Vérifier le remote
+git remote -v
+
+# 7. Pousser vers le dépôt distant
+git push -u origin main
+
+# OU si votre branche s'appelle master :
+# git push -u origin master
+
