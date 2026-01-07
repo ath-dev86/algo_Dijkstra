@@ -11,14 +11,14 @@ import aa.util.LinkedList;
  * Elle stocke les listes d'adjacence dans un tableau de listes d'adjacence. chaque indice du tableau (de 1 à n) correspond à un sommet du graphe et son contenu est la liste
  * d'adjacence (sommet voisin et coût de l'arête) du sommet correspondant.
  * Exemple de Représentation :
- * 1 : (2, 10)->(3, 20)->(4, 22)->null
- * 2 : (1, 10)->(3, 30)->null
- * 3 : (1, 20)->(2, 30)->null
- * 4 : (5, 40)->null
- * 5 : (4, 40)->null
- * 6 : (7, 50)->(8, 23)->null
- * 7 : (6, 50)->(8, 76)->null
- * 8 : (6, 50)->(7, 98)->null
+ * 1 : (2, 10)-(3, 20)-(4, 22)-null
+ * 2 : (1, 10)-(3, 30)-null
+ * 3 : (1, 20)-(2, 30)-null
+ * 4 : (5, 40)-null
+ * 5 : (4, 40)-null
+ * 6 : (7, 50)-(8, 23)-null
+ * 7 : (6, 50)-(8, 76)-null
+ * 8 : (6, 50)-(7, 98)-null
  * 
  * @author Abdou THIAM
  * @version 1.0
@@ -149,7 +149,7 @@ public class GraphList extends Graph {
     /**
      * Lit un graphe depuis un fichier au format spécifié du projet.
      * @param filename le nom du fichier
-     * @return le graphe lisible
+     * @return le graphe lisible en liste d’adjacence
      * @throws IOException si le fichier n'est pas trouvé ou si le format est invalide
      */
     public static GraphList readFromFile(String filename) throws IOException {
@@ -167,7 +167,7 @@ public class GraphList extends Graph {
         GraphList graph = new GraphList(n);
 
         // Lire les sommets et leurs voisins
-        // Format : pour chaque sommet x : x quantité voisin1 coût1 voisin2 coût2 ... 0
+        // Format : pour chaque sommet x : qx quantité voisin1 coût1 voisin2 coût2 ... 0
         // On doit lire exactement n sommets
         for (int i = 0; i < n && index < integers.length; i++) {
             // Lire le numéro du sommet

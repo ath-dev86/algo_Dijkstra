@@ -1,6 +1,8 @@
 package aa.graph;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 public class CellTest {
     private Cell cell;
@@ -12,21 +14,25 @@ public class CellTest {
 
     @org.junit.Test
     public void getVertex() {
+        //tester le numéro du sommet voisin du sommet actuel
         assertEquals(2, cell.getVertex());
     }
 
     @org.junit.Test
     public void getCost() {
+        //tester le coût de l'arête
         assertEquals(61, cell.getCost());
     }
 
     @org.junit.Test
     public void getNext() {
+        //tester la prochaine cellule
         assertNull(cell.getNext());
     }
 
     @org.junit.Test
     public void setNext() {
+        //tester la prochaine cellule qui est differente de null
         Cell cell1 = new Cell(3, 50);
         cell.setNext(cell1);
         assertNotNull(cell.getNext());
