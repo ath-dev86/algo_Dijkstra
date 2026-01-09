@@ -22,28 +22,28 @@ EXÉCUTION
 ---------
 
 Les trois programmes doivent être exécutés depuis le répertoire racine du projet,
-en spécifiant le classpath approprié.
+en spécifiant la classpath approprié.
 
 1. Programme dijkstra_L (avec listes d'adjacence) :
    
    java -cp target/classes aa.app.DijkstraL <fichier_graphe> <sommet_depart> [fichier_sortie]
    
    Exemple :
-   java -cp target/classes aa.app.DijkstraL data/graphe.txt 1 resultat.txt
+   java -cp target/classes aa.app.DijkstraL data/graphe.txt 1 data/resultatL.txt
 
 2. Programme dijkstra_M (avec matrice d'adjacence) :
    
    java -cp target/classes aa.app.DijkstraM <fichier_graphe> <sommet_depart> [fichier_sortie]
    
    Exemple :
-   java -cp target/classes aa.app.DijkstraM data/graphe.txt 1 resultat.txt
+   java -cp target/classes aa.app.DijkstraM data/graphe.txt 1 data/resultatM.txt
 
 3. Programme calculProvinces :
    
    java -cp target/classes aa.app.CalculProvinces <fichier_graphe> <dMax> <popMax>
    
    Exemple :
-   java -cp target/classes aa.app.CalculProvinces data/graphe.txt 100 500
+   java -cp target/classes aa.app.CalculProvinces data/graphe_exemple.txt 100 500
 
 
 FORMAT D'ENTRÉE DES GRAPHES
@@ -70,9 +70,6 @@ Exemple :
 5 50 4 84 0
 6 0 1 28 5 34 0
 
-Ou sur une seule ligne :
-6 1 200 0 2 0 1 61 0 3 100 1 50 2 1 0 4 150 1 3 68 0 5 50 4 84 0 6 0 1 28 5 34 0
-
 
 STRUCTURE DU PROJET
 --------------------
@@ -89,9 +86,11 @@ src/main/java/aa/
   │   └── Cell.java           : Cellule pour les listes d'adjacence
   ├── algo/             : Algorithmes
   │   └── Dijkstra.java       : Implémentation de l'algorithme de Dijkstra
-  └── util/             : Structures de données
+  └── util/             : Structures de données maison
       ├── LinkedList.java     : Liste chaînée simple
+      └── FileReader.java     : Lecture des fichiers
       └── MinHeap.java        : Tas min pour Dijkstra
+
 
 
 NOTES IMPORTANTES
@@ -109,4 +108,6 @@ AUTEUR
 ------
 
 Abdou THIAM
+
+Etudiant en Master 1 Informatique - Logiciel et Big Data - Université de Poitiers - 2025/2026
 

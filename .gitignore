@@ -97,3 +97,4 @@ rapport_*.pdf
 *.7z
 *.rar
 !data/*.zip
+data/*.txt

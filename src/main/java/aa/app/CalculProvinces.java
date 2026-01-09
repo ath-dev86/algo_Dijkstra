@@ -10,6 +10,13 @@ import java.io.IOException;
  * de distance et de population.
  * 
  * Usage: java aa.app.CalculProvinces [fichier_graphe] [dMax] [popMax]
+ * @author Abdou THIAM
+ * @since 1.0
+ * @version 1.0
+ * @see Graph
+ * @see GraphList
+ * @see Dijkstra
+ * @see Province
  */
 public class CalculProvinces {
     
