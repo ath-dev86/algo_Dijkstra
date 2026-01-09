@@ -10,7 +10,7 @@ import java.io.PrintWriter;
  * Programme dijkstra_L : calcul des distances avec représentation par listes d'adjacence.
  * (Si vous voulez voir la documentation des classes de source de java utilisées ici : {@link FileWriter}, {@link IOException}
  * , {@link PrintWriter}, {@link NumberFormatException}, {@link System}, {@link String})
- * Usage: java aa.app.DijkstraL <fichier_graphe> <sommet_depart> [fichier_sortie]
+ * Usage: java aa.app.DijkstraL [fichier_graphe] [sommet_depart] [fichier_sortie]
  * @author Abdou THIAM
  * @since 1.0
  * @version 1.0

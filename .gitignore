@@ -98,3 +98,7 @@ rapport_*.pdf
 *.rar
 !data/*.zip
 data/*.txt
+
+
+# java doc
+javaDoc/

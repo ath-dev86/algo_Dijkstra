@@ -64,11 +64,24 @@ public class GraphMatrix extends Graph {
         matrix[y][x] = c;
     }
 
+    /**
+     * Calculer le coût de l'arête entre les sommets x et y.
+     * 
+     * @param x le numéro du sommet
+     * @param y le numéro du sommet voisin
+     * @return le coût de l'arête, ou Integer.MAX_VALUE si l'arête n'existe pas
+     */
     @Override
     public int getCost(int x, int y) {
         return matrix[x][y];
     }
 
+    /**
+     * Retourner tous les voisins du sommet x.
+     * 
+     * @param x le numéro du sommet
+     * @return les voisins du sommet x dans un tableau d'entiers
+     */
     @Override
     public int[] getNeighbors(int x) {
         // Compter le nombre de voisins

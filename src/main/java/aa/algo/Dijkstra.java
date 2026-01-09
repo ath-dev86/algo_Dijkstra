@@ -21,12 +21,42 @@ public class Dijkstra {
     
     /**
      * Résultat de l'algorithme de Dijkstra.
+     * 
+     * <p>Cette classe encapsule les résultats de l'exécution de l'algorithme de Dijkstra,
+     * incluant les distances, les prédécesseurs pour reconstruire les chemins, et
+     * l'information sur la connexité du graphe.
+     * 
+     * @author Abdou THIAM
+     * @version 1.0
+     * @since 1.0
      */
     public static class Result {
-        public int[] distances;      // distances[i] = distance du sommet source au sommet i
-        public int[] predecessors;   // predecessors[i] = prédécesseur de i dans le chemin le plus court
-        public boolean isConnected;   // true si tous les sommets sont atteignables depuis la source
+        /** 
+         * Tableau des distances depuis le sommet source.
+         * distances[i] = distance du sommet source au sommet i.
+         * Si le sommet i n'est pas atteignable, distances[i] = -1.
+         */
+        public int[] distances;
+        
+        /** 
+         * Tableau des prédécesseurs pour reconstruire les chemins les plus courts.
+         * predecessors[i] = prédécesseur de i dans le chemin le plus court depuis la source.
+         * predecessors[source] = -1 (pas de prédécesseur pour la source).
+         * Si le sommet i n'est pas atteignable, predecessors[i] = -1.
+         */
+        public int[] predecessors;
+        
+        /** 
+         * Indique si tous les sommets sont atteignables depuis la source.
+         * true si le graphe est connexe depuis la source, false sinon.
+         */
+        public boolean isConnected;
 
+        /**
+         * Constructeur pour créer un résultat avec n sommets.
+         * 
+         * @param n le nombre de sommets du graphe (les sommets sont numérotés de 1 à n)
+         */
         public Result(int n) {
             this.distances = new int[n + 1];
             this.predecessors = new int[n + 1];
