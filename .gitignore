@@ -102,3 +102,5 @@ data/*.txt
 
 # java doc
 javaDoc/
+src/main/java/aa/Main.java
+annexe/
