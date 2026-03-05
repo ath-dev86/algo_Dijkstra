@@ -111,3 +111,6 @@ Abdou THIAM
 
 Etudiant en Master 1 Informatique - Logiciel et Big Data - Université de Poitiers - 2025/2026
 
+NOTE
+15/20
+
