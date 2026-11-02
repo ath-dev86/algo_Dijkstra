@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Suivi Heures & Salaire",
+    "slug": "suivi-heures-salaire",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F4F6FB",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font"
+    ]
+  }
+}
